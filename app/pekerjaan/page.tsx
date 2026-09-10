@@ -112,7 +112,7 @@ export default function WorkPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <p className="text-sm font-medium uppercase tracking-[var(--tracking-label)] lg:col-span-3">Selanjutnya</p>
             <div className="max-w-3xl lg:col-span-7">
-              <Heading as="h2" className="font-[family-name:var(--font-serif)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl" id="next-title">
+              <Heading as="h2" className="font-[family-name:var(--font-sans)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl" id="next-title">
                 Masih banyak yang sedang saya bangun.
               </Heading>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[color:color-mix(in_srgb,var(--color-off-white)_78%,transparent)] sm:text-lg">

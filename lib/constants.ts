@@ -6,7 +6,7 @@ export const siteConfig = {
 };
 
 export const navigationItems = [
-  { href: "/tentang", label: "Tentang Saya" },
+  { href: "/tentang", label: "Tentang" },
   { href: "/pekerjaan", label: "Pekerjaan" },
   { href: "/insights", label: "Insights" },
   { href: "/produk", label: "Produk" },

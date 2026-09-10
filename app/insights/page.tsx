@@ -102,7 +102,7 @@ export default function InsightsPage() {
               </Heading>
             </div>
             <div className="flex min-h-56 items-end border-t border-[color:var(--color-border)] pt-8 lg:col-span-9 lg:min-h-72 lg:pt-10">
-              <p className="max-w-2xl font-[family-name:var(--font-serif)] text-3xl leading-[1.08] tracking-[var(--tracking-heading)] text-[color:var(--color-muted)] sm:text-4xl lg:text-5xl">
+              <p className="max-w-2xl font-[family-name:var(--font-sans)] text-3xl leading-[1.08] tracking-[var(--tracking-heading)] text-[color:var(--color-muted)] sm:text-4xl lg:text-5xl">
                 Saya masih membangun ruang ini. Tulisan dan catatan akan hadir secara bertahap.
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function InsightsPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <p className="text-sm font-medium uppercase tracking-[var(--tracking-label)] lg:col-span-3">Mari terhubung</p>
             <div className="max-w-3xl lg:col-span-7">
-              <Heading as="h2" className="font-[family-name:var(--font-serif)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl" id="insights-contact-title">
+              <Heading as="h2" className="font-[family-name:var(--font-sans)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl" id="insights-contact-title">
                 Belum menemukan yang Anda cari?
               </Heading>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[color:color-mix(in_srgb,var(--color-off-white)_78%,transparent)] sm:text-lg">

@@ -1,30 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  /* Quiet Confidence — colour */
   --color-off-white: #f5f3ee;
   --color-charcoal: #171717;
   --color-text: #252525;
   --color-muted: #77736c;
-  --color-olive: #5e654b;
-
+  --color-green: #16b93f;
+  /* Kept as an alias while pages adopt the green accent system. */
+  --color-olive: var(--color-green);
   --color-border: color-mix(in srgb, var(--color-charcoal) 16%, transparent);
-  --color-border-strong: color-mix(in srgb, var(--color-charcoal) 32%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-charcoal) 38%, transparent);
 
-  /* Quiet Confidence — typography */
-  --font-serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
   --font-size-body: 1rem;
-  --font-size-small: 0.8125rem;
-  --font-size-display: clamp(3.25rem, 8vw, 7.5rem);
-  --font-size-title: clamp(2.5rem, 5vw, 5rem);
+  --font-size-small: 0.75rem;
+  --font-size-display: clamp(3.5rem, 5.3vw, 4.75rem);
+  --font-size-title: clamp(2.3rem, 4.2vw, 4rem);
   --leading-body: 1.6;
   --leading-tight: 0.98;
-  --tracking-display: -0.045em;
-  --tracking-heading: -0.035em;
-  --tracking-label: 0.12em;
+  --tracking-display: -0.065em;
+  --tracking-heading: -0.052em;
+  --tracking-label: 0.11em;
 
-  /* Quiet Confidence — rhythm and layout */
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
@@ -36,24 +33,17 @@
   --space-16: 4rem;
   --space-24: 6rem;
   --space-32: 8rem;
-  --layout-max-width: 90rem;
-  --layout-gutter: clamp(1.25rem, 3vw, 3rem);
-  --section-space: clamp(4rem, 10vw, 8rem);
-  --control-height: 2.75rem;
-
-  /* Quiet Confidence — interaction */
+  --layout-max-width: 86rem;
+  --layout-gutter: clamp(1.25rem, 4vw, 4rem);
+  --section-space: clamp(4.5rem, 8vw, 7.5rem);
+  --control-height: 3rem;
   --duration-fast: 160ms;
   --duration-standard: 220ms;
   --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * { box-sizing: border-box; }
-
-html {
-  background: var(--color-off-white);
-  scroll-behavior: smooth;
-}
-
+html { background: var(--color-off-white); scroll-behavior: smooth; }
 body {
   background: var(--color-off-white);
   color: var(--color-text);
@@ -62,52 +52,41 @@ body {
   line-height: var(--leading-body);
   text-rendering: optimizeLegibility;
 }
-
 img, picture, svg, video, canvas { display: block; max-width: 100%; }
-
 button, input, textarea, select { font: inherit; }
-
 a { text-underline-offset: 0.18em; }
-
-::selection { background: var(--color-olive); color: var(--color-off-white); }
-
-:focus-visible {
-  outline: 2px solid var(--color-olive);
-  outline-offset: 4px;
-}
+::selection { background: var(--color-green); color: var(--color-charcoal); }
+:focus-visible { outline: 3px solid var(--color-green); outline-offset: 4px; }
 
 .type-display {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--font-size-display);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: var(--tracking-display);
-  line-height: var(--leading-tight);
+  line-height: 0.98;
   text-wrap: balance;
 }
-
 .type-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--font-size-title);
-  font-weight: 400;
+  font-weight: 750;
   letter-spacing: var(--tracking-heading);
-  line-height: var(--leading-tight);
+  line-height: 1;
   text-wrap: balance;
 }
-
 .type-label {
   color: var(--color-muted);
   font-size: var(--font-size-small);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: var(--tracking-label);
-  line-height: 1.3;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
+@media (max-width: 40rem) {
+  :root { --font-size-display: clamp(2.5rem, 12vw, 3.25rem); --font-size-title: clamp(2.1rem, 10vw, 2.75rem); }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }

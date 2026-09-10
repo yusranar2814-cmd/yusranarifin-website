@@ -5,16 +5,12 @@ type HeadingProps<T extends ElementType> = {
   className?: string;
 } & Omit<ComponentPropsWithoutRef<T>, "as" | "className">;
 
-export function Heading<T extends ElementType = "h2">({
-  as,
-  className = "",
-  ...props
-}: HeadingProps<T>) {
+export function Heading<T extends ElementType = "h2">({ as, className = "", ...props }: HeadingProps<T>) {
   const Component = as ?? "h2";
 
   return (
     <Component
-      className={`font-[family-name:var(--font-serif)] text-balance font-normal tracking-[var(--tracking-heading)] text-[color:var(--color-text)] ${className}`}
+      className={`font-[family-name:var(--font-sans)] text-balance font-bold tracking-[var(--tracking-heading)] text-[color:var(--color-text)] ${className}`}
       {...props}
     />
   );

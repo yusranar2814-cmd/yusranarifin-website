@@ -100,7 +100,7 @@ export default function AboutPage() {
               <Heading as="h2" className="sr-only" id="percaya-title">Beberapa hal yang saya percaya</Heading>
               <div className="border-t border-[color:var(--color-border)]">
                 {beliefs.map((belief, index) => (
-                  <p className={`max-w-4xl border-b border-[color:var(--color-border)] py-9 font-[family-name:var(--font-serif)] text-3xl leading-[1.08] tracking-[var(--tracking-heading)] sm:text-4xl lg:text-5xl ${index % 2 === 1 ? "lg:ml-[12%]" : ""}`} key={belief}>
+                  <p className={`max-w-4xl border-b border-[color:var(--color-border)] py-9 font-[family-name:var(--font-sans)] text-3xl leading-[1.08] tracking-[var(--tracking-heading)] sm:text-4xl lg:text-5xl ${index % 2 === 1 ? "lg:ml-[12%]" : ""}`} key={belief}>
                     {belief}
                   </p>
                 ))}
@@ -154,7 +154,7 @@ export default function AboutPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <p className="text-sm font-medium uppercase tracking-[var(--tracking-label)] lg:col-span-3">Mari terhubung</p>
             <div className="max-w-3xl lg:col-span-7">
-              <Heading as="h2" className="font-[family-name:var(--font-serif)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl" id="about-contact-title">Masih banyak yang sedang saya bangun.</Heading>
+              <Heading as="h2" className="font-[family-name:var(--font-sans)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl" id="about-contact-title">Masih banyak yang sedang saya bangun.</Heading>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[color:color-mix(in_srgb,var(--color-off-white)_78%,transparent)] sm:text-lg">Kalau ada hal yang sedang Anda pikirkan, bangun, atau ingin diskusikan, mari ngobrol.</p>
               <Button className="mt-8 bg-[color:var(--color-off-white)] text-[color:var(--color-charcoal)] hover:bg-[color:var(--color-off-white)] hover:text-[color:var(--color-olive)]" href="/kontak">Mari ngobrol →</Button>
             </div>
