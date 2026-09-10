@@ -1,28 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  /* Quiet Confidence — colour */
+  /* Modern personal brand — colour */
   --color-off-white: #f5f3ee;
   --color-charcoal: #171717;
   --color-text: #252525;
   --color-muted: #77736c;
-  --color-olive: #5e654b;
+  --color-accent: #16b93f;
+  /* Retained as an alias for existing component overrides. */
+  --color-olive: var(--color-accent);
 
   --color-border: color-mix(in srgb, var(--color-charcoal) 16%, transparent);
   --color-border-strong: color-mix(in srgb, var(--color-charcoal) 32%, transparent);
 
-  /* Quiet Confidence — typography */
-  --font-serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
-  --font-sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Modern sans-first typography */
+  --font-sans: Manrope, "Plus Jakarta Sans", Inter, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-sans);
   --font-size-body: 1rem;
   --font-size-small: 0.75rem;
-  --font-size-display: clamp(3.1rem, 7.5vw, 7.25rem);
-  --font-size-title: clamp(2.35rem, 4.75vw, 4.75rem);
-  --leading-body: 1.68;
-  --leading-tight: 1.01;
+  --font-size-display: clamp(3.25rem, 5.4vw, 4.75rem);
+  --font-size-title: clamp(2.15rem, 3.5vw, 3.5rem);
+  --leading-body: 1.62;
+  --leading-tight: 1.06;
   --tracking-display: -0.052em;
-  --tracking-heading: -0.04em;
-  --tracking-label: 0.105em;
+  --tracking-heading: -0.042em;
+  --tracking-label: 0.09em;
 
   /* Quiet Confidence — rhythm and layout */
   --space-2: 0.5rem;
@@ -38,7 +40,7 @@
   --space-32: 8rem;
   --layout-max-width: 90rem;
   --layout-gutter: clamp(1.25rem, 3.5vw, 3.5rem);
-  --section-space: clamp(4.5rem, 9vw, 8.5rem);
+  --section-space: clamp(4rem, 7.5vw, 7rem);
   --control-height: 2.875rem;
 
   /* Quiet Confidence — interaction */
@@ -73,26 +75,26 @@ a {
   text-underline-offset: 0.2em;
 }
 
-::selection { background: var(--color-olive); color: var(--color-off-white); }
+::selection { background: var(--color-accent); color: var(--color-charcoal); }
 
 :focus-visible {
-  outline: 2px solid var(--color-olive);
+  outline: 2px solid var(--color-accent);
   outline-offset: 4px;
 }
 
 .type-display {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--font-size-display);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: var(--tracking-display);
   line-height: var(--leading-tight);
   text-wrap: balance;
 }
 
 .type-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--font-size-title);
-  font-weight: 400;
+  font-weight: 750;
   letter-spacing: var(--tracking-heading);
   line-height: var(--leading-tight);
   text-wrap: balance;
@@ -133,11 +135,12 @@ a {
 
 @media (max-width: 40rem) {
   :root {
-    --section-space: clamp(4rem, 16vw, 5.5rem);
+    --section-space: clamp(3.75rem, 14vw, 5rem);
   }
 
   .type-display {
-    line-height: 1.04;
+    font-size: clamp(2.75rem, 12vw, 3.5rem);
+    line-height: 1.07;
   }
 }
 

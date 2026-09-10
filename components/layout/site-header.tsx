@@ -17,7 +17,7 @@ function NavigationLinks({ onNavigate }: { onNavigate?: () => void }) {
         aria-current={isActive ? "page" : undefined}
         className={`text-link relative py-2 text-[0.8125rem] font-medium tracking-[-0.01em] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] motion-reduce:transition-none ${
           isActive
-            ? "text-[color:var(--color-charcoal)] after:scale-x-100"
+            ? "text-[color:var(--color-accent)] after:scale-x-100"
             : "text-[color:var(--color-muted)] hover:text-[color:var(--color-charcoal)]"
         }`.trim()}
         href={item.href}
@@ -36,7 +36,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-[color:var(--color-border)] bg-[color:var(--color-off-white)]">
       <Container className="flex min-h-[4.5rem] items-center justify-between gap-6 py-3">
-        <Link className="text-[0.8125rem] font-semibold tracking-[-0.025em] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-olive)] motion-reduce:transition-none" href="/">
+        <Link className="text-[0.8125rem] font-bold tracking-[-0.025em] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-accent)] motion-reduce:transition-none" href="/">
           Yusran Arifin
         </Link>
 
