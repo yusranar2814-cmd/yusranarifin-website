@@ -15,11 +15,11 @@ function NavigationLinks({ onNavigate }: { onNavigate?: () => void }) {
     return (
       <Link
         aria-current={isActive ? "page" : undefined}
-        className={`text-sm transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] motion-reduce:transition-none ${
+        className={`text-link relative py-2 text-[0.8125rem] font-medium tracking-[-0.01em] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] motion-reduce:transition-none ${
           isActive
-            ? "text-[color:var(--color-charcoal)]"
+            ? "text-[color:var(--color-charcoal)] after:scale-x-100"
             : "text-[color:var(--color-muted)] hover:text-[color:var(--color-charcoal)]"
-        }`}
+        }`.trim()}
         href={item.href}
         key={item.href}
         onClick={onNavigate}
@@ -34,20 +34,20 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="border-b border-[color:var(--color-border)]">
-      <Container className="flex min-h-[4.5rem] items-center justify-between gap-6 py-4">
-        <Link className="text-sm font-semibold tracking-[-0.02em]" href="/">
+    <header className="sticky top-0 z-30 border-b border-[color:var(--color-border)] bg-[color:var(--color-off-white)]">
+      <Container className="flex min-h-[4.5rem] items-center justify-between gap-6 py-3">
+        <Link className="text-[0.8125rem] font-semibold tracking-[-0.025em] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-olive)] motion-reduce:transition-none" href="/">
           Yusran Arifin
         </Link>
 
-        <nav aria-label="Navigasi utama" className="hidden items-center gap-6 md:flex">
+        <nav aria-label="Navigasi utama" className="hidden items-center gap-7 lg:gap-8 md:flex">
           <NavigationLinks />
         </nav>
 
         <button
           aria-controls="mobile-navigation"
           aria-expanded={isOpen}
-          className="inline-flex min-h-[var(--control-height)] min-w-[var(--control-height)] items-center justify-center border border-[color:var(--color-border-strong)] text-sm md:hidden"
+          className="inline-flex min-h-[var(--control-height)] min-w-[var(--control-height)] items-center justify-center border border-[color:var(--color-border-strong)] px-3 text-[0.75rem] font-semibold uppercase tracking-[0.08em] transition-[background-color,border-color,color] duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:border-[color:var(--color-charcoal)] hover:bg-[color:var(--color-charcoal)] hover:text-[color:var(--color-off-white)] motion-reduce:transition-none md:hidden"
           onClick={() => setIsOpen((current) => !current)}
           type="button"
         >
@@ -64,7 +64,7 @@ export function SiteHeader() {
       >
         <div className="overflow-hidden">
           <Container>
-            <nav aria-label="Navigasi seluler" className="flex flex-col gap-5 border-t border-[color:var(--color-border)] py-6">
+            <nav aria-label="Navigasi seluler" className="flex flex-col gap-3 border-t border-[color:var(--color-border)] py-5">
               <NavigationLinks onNavigate={() => setIsOpen(false)} />
             </nav>
           </Container>

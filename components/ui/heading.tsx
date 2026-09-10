@@ -14,7 +14,7 @@ export function Heading<T extends ElementType = "h2">({
 
   return (
     <Component
-      className={`font-[family-name:var(--font-serif)] text-balance font-normal tracking-[var(--tracking-heading)] text-[color:var(--color-text)] ${className}`}
+      className={`font-[family-name:var(--font-serif)] text-balance font-normal tracking-[var(--tracking-heading)] text-[color:var(--color-text)] ${className}`.trim()}
       {...props}
     />
   );

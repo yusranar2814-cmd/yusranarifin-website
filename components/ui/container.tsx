@@ -14,7 +14,7 @@ export function Container<T extends ElementType = "div">({
 
   return (
     <Component
-      className={`mx-auto w-full max-w-[var(--layout-max-width)] px-[var(--layout-gutter)] ${className}`}
+      className={`mx-auto w-full max-w-[var(--layout-max-width)] px-[var(--layout-gutter)] ${className}`.trim()}
       {...props}
     />
   );

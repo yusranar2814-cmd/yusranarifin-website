@@ -10,7 +10,7 @@ export function Section({
   ...props
 }: SectionProps) {
   return (
-    <section className={`py-[var(--section-space)] ${className}`} {...props}>
+    <section className={`py-[var(--section-space)] ${className}`.trim()} {...props}>
       {contained ? <Container>{children}</Container> : children}
     </section>
   );
