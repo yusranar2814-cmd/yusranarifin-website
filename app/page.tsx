@@ -38,16 +38,16 @@ const explorations = [
 export default function HomePage() {
   return (
     <>
-      <Section contained={false} className="flex min-h-[calc(100svh-4.5rem)] items-center overflow-hidden">
+      <Section contained={false} className="flex min-h-[calc(100svh-4.75rem)] items-center overflow-hidden py-16 lg:py-24">
         <Container>
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-9">
-              <p className="type-label">Yusran Arifin — Personal website</p>
-              <Heading as="h1" className="type-display mt-6 max-w-6xl">
-                Saya percaya, bisnis yang baik tidak seharusnya bergantung pada keberuntungan.
+              <p className="type-label flex items-center gap-3"><span className="inline-block size-2 bg-[color:var(--color-green)]" />Yusran Arifin — Personal website</p>
+              <Heading as="h1" className="type-display mt-7 max-w-5xl">
+                Saya percaya, bisnis yang baik tidak seharusnya bergantung pada <span className="text-[color:var(--color-green)]">keberuntungan.</span>
               </Heading>
             </div>
-            <div className="flex flex-col justify-end lg:col-span-3">
+            <div className="flex flex-col justify-end border-l-2 border-[color:var(--color-green)] pl-5 lg:col-span-3 lg:pl-7">
               <div className="max-w-sm space-y-5 text-base leading-relaxed text-[color:var(--color-muted)] sm:text-lg">
                 <p>Saya banyak belajar tentang bagaimana marketing, sales, dan teknologi bisa dibangun menjadi sebuah sistem yang lebih terarah dan bisa diprediksi.</p>
                 <p>Ini adalah tempat saya mencatat perjalanan, pekerjaan, pemikiran, dan hal-hal yang sedang saya bangun.</p>
@@ -202,7 +202,7 @@ export default function HomePage() {
               <p className="text-sm font-medium uppercase tracking-[var(--tracking-label)] text-[color:color-mix(in_srgb,var(--color-off-white)_62%,transparent)]">07 — Digital products</p>
             </div>
             <div className="max-w-4xl lg:col-span-8">
-              <Heading as="h2" className="font-[family-name:var(--font-serif)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl">Yang sedang saya bangun.</Heading>
+              <Heading as="h2" className="font-[family-name:var(--font-sans)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl">Yang sedang saya bangun.</Heading>
               <p className="mt-10 text-sm font-medium uppercase tracking-[var(--tracking-label)] text-[color:color-mix(in_srgb,var(--color-off-white)_62%,transparent)]">Predictable Marketing to Sales</p>
               <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[color:color-mix(in_srgb,var(--color-off-white)_78%,transparent)] sm:text-xl">Belajar membangun sistem marketing dan sales yang lebih terarah, terukur, dan bisa diprediksi.</p>
               <Button className="mt-9 bg-[color:var(--color-off-white)] text-[color:var(--color-charcoal)] hover:bg-[color:var(--color-off-white)] hover:text-[color:var(--color-olive)]" href="/produk">Pelajari lebih lanjut →</Button>
@@ -216,7 +216,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <p className="text-sm font-medium uppercase tracking-[var(--tracking-label)] lg:col-span-3">08 — Contact</p>
             <div className="max-w-3xl lg:col-span-7">
-              <Heading as="h2" className="font-[family-name:var(--font-serif)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl">Yuk ngobrol.</Heading>
+              <Heading as="h2" className="font-[family-name:var(--font-sans)] text-5xl leading-[var(--leading-tight)] tracking-[var(--tracking-heading)] text-[color:var(--color-off-white)] sm:text-6xl lg:text-7xl">Yuk ngobrol.</Heading>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[color:color-mix(in_srgb,var(--color-off-white)_78%,transparent)] sm:text-lg">Untuk kolaborasi, pertanyaan, atau sekadar bertukar perspektif, silakan hubungi saya.</p>
               <Button className="mt-8 bg-[color:var(--color-off-white)] text-[color:var(--color-charcoal)] hover:bg-[color:var(--color-off-white)] hover:text-[color:var(--color-olive)]" href="/kontak">Mulai percakapan →</Button>
             </div>
