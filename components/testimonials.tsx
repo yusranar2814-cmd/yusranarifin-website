@@ -46,7 +46,7 @@ export function Testimonials() {
             <Heading as="h3" className="text-lg leading-none">{testimonial.name}</Heading>
             <span className="text-[color:var(--color-muted)]">/ {testimonial.role}</span>
           </div>
-          <p className="mt-3 text-sm tracking-[0.08em]" aria-label="5 dari 5 bintang">★★★★★</p>
+          <p className="mt-3 text-sm tracking-[0.08em]" aria-label="Rating 5 dari 5 bintang">★★★★★</p>
         </article>
       ))}
     </div>
