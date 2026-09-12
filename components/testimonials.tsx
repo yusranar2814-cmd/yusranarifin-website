@@ -38,15 +38,15 @@ export function Testimonials() {
   return (
     <div className="border-t border-[color:var(--color-border)]">
       {testimonials.map((testimonial) => (
-        <article className="border-b border-[color:var(--color-border)] py-9 sm:py-12" key={testimonial.name}>
-          <p className="max-w-4xl font-[family-name:var(--font-sans)] text-2xl leading-[1.12] tracking-[var(--tracking-heading)] sm:text-3xl lg:text-4xl">
+        <article className="border-b border-[color:var(--color-border)] py-7 sm:py-9" key={testimonial.name}>
+          <p className="max-w-3xl font-[family-name:var(--font-sans)] text-xl leading-[1.2] tracking-[var(--tracking-heading)] sm:text-2xl lg:text-3xl">
             “{testimonial.quote}”
           </p>
-          <div className="mt-7 flex items-baseline gap-3 text-sm">
-            <Heading as="h3" className="text-lg leading-none">{testimonial.name}</Heading>
+          <div className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+            <Heading as="h3" className="text-base leading-none">{testimonial.name}</Heading>
             <span className="text-[color:var(--color-muted)]">/ {testimonial.role}</span>
           </div>
-          <p className="mt-3 text-sm tracking-[0.08em]" aria-label="Rating 5 dari 5 bintang">★★★★★</p>
+          <p className="mt-2 text-sm tracking-[0.08em]" aria-label="Rating 5 dari 5 bintang">★★★★★</p>
         </article>
       ))}
     </div>
