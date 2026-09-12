@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -33,18 +34,26 @@ export default function AboutPage() {
     <>
       <Section contained={false} className="flex min-h-[calc(100svh-4.5rem)] items-center overflow-hidden">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-9">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-10">
+            <div className="lg:col-span-7">
               <p className="type-label">01 — Tentang saya</p>
               <Heading as="h1" className="type-display mt-6 max-w-5xl">Sedikit tentang saya.</Heading>
+              <div className="mt-9 max-w-2xl space-y-5 text-base leading-relaxed text-[color:var(--color-muted)] sm:text-lg">
+                <p>Saya tertarik pada bagaimana marketing, bisnis, produk digital, teknologi, dan AI bisa saling menguatkan dalam pekerjaan sehari-hari.</p>
+                <p>Lebih dari sekadar mencari jawaban yang cepat, saya sedang belajar memahami masalah dengan lebih baik—lalu membangun cara kerja yang lebih sederhana, terarah, dan berguna.</p>
+              </div>
             </div>
-            <div className="max-w-md self-end lg:col-span-3">
-              <p className="text-base leading-relaxed text-[color:var(--color-muted)] sm:text-lg">
-                Saya tertarik pada bagaimana marketing, bisnis, produk digital, teknologi, dan AI bisa saling menguatkan dalam pekerjaan sehari-hari.
-              </p>
-              <p className="mt-5 text-base leading-relaxed text-[color:var(--color-muted)] sm:text-lg">
-                Lebih dari sekadar mencari jawaban yang cepat, saya sedang belajar memahami masalah dengan lebih baik—lalu membangun cara kerja yang lebih sederhana, terarah, dan berguna.
-              </p>
+            <div className="lg:col-span-5">
+              <div className="relative overflow-hidden bg-[color:var(--color-charcoal)]">
+                <Image
+                  src="/images/39abb5a3-35f2-4afe-8f85-48f8a3d169fe.png"
+                  alt="Yusran Arifin sedang mempresentasikan materi"
+                  width={1200}
+                  height={1500}
+                  priority
+                  className="h-auto w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </Container>
