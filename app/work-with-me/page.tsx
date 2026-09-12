@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
+import { Testimonials } from "@/components/testimonials";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -138,6 +139,22 @@ export default function WorkWithMePage() {
                   </article>
                 ))}
               </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <Section contained={false} aria-labelledby="testimonials-title">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-3">
+              <p className="type-label">03 — Testimoni</p>
+              <Heading as="h2" className="type-title mt-5" id="testimonials-title">
+                Yang pernah bekerja dan belajar bersama saya.
+              </Heading>
+            </div>
+            <div className="lg:col-span-9">
+              <Testimonials />
             </div>
           </div>
         </Container>
