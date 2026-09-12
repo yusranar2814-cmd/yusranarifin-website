@@ -38,7 +38,7 @@ const opportunities: readonly Opportunity[] = [
     description: "Sesi pendampingan personal untuk membahas tantangan marketing, sales, bisnis, atau sistem yang sedang Anda bangun.",
     additionalDescription:
       "Kita bisa mulai dari masalah yang sedang dihadapi, melihat kondisi saat ini, lalu mencari langkah yang paling masuk akal untuk dilakukan berikutnya.",
-    cta: "Diskusikan Mentoring",
+    cta: "Mulai Mentoring",
   },
   {
     number: "03",
@@ -64,6 +64,9 @@ const opportunities: readonly Opportunity[] = [
     cta: "Mari Diskusikan",
   },
 ] as const;
+
+const mentoringWhatsAppUrl =
+  "https://wa.me/6281341111820?text=Halo%20Yusran%2C%20saya%20tertarik%20dengan%20One%20on%20One%20Mentoring.%20Saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20saya%20terkait%20marketing%2Fbusiness.";
 
 export default function WorkWithMePage() {
   return (
@@ -117,9 +120,20 @@ export default function WorkWithMePage() {
                           ))}
                         </ul>
                       ) : null}
-                      <Link className="mt-8 inline-flex text-sm font-medium text-[color:var(--color-text)] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-olive)] motion-reduce:transition-none" href="/kontak">
-                        {opportunity.cta} <span aria-hidden="true">→</span>
-                      </Link>
+                      {opportunity.number === "02" ? (
+                        <a
+                          className="mt-8 inline-flex text-sm font-medium text-[color:var(--color-text)] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-olive)] motion-reduce:transition-none"
+                          href={mentoringWhatsAppUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {opportunity.cta} <span aria-hidden="true">→</span>
+                        </a>
+                      ) : (
+                        <Link className="mt-8 inline-flex text-sm font-medium text-[color:var(--color-text)] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-olive)] motion-reduce:transition-none" href="/kontak">
+                          {opportunity.cta} <span aria-hidden="true">→</span>
+                        </Link>
+                      )}
                     </div>
                   </article>
                 ))}
