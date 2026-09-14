@@ -62,7 +62,7 @@ const opportunities: readonly Opportunity[] = [
     description: "Terbuka untuk kolaborasi yang relevan dengan marketing, bisnis, digital product, teknologi, maupun community.",
     additionalDescription:
       "Bisa berupa campaign, project, content collaboration, knowledge sharing, atau bentuk kerja sama lainnya.",
-    cta: "Mari Diskusikan",
+    cta: "Lihat Marketing Advisory",
   },
 ] as const;
 
@@ -130,6 +130,10 @@ export default function WorkWithMePage() {
                         >
                           {opportunity.cta} <span aria-hidden="true">→</span>
                         </a>
+                      ) : opportunity.number === "04" ? (
+                        <Link className="mt-8 inline-flex text-sm font-medium text-[color:var(--color-text)] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-olive)] motion-reduce:transition-none" href="/work-with-me/marketing-advisory">
+                          {opportunity.cta} <span aria-hidden="true">→</span>
+                        </Link>
                       ) : (
                         <Link className="mt-8 inline-flex text-sm font-medium text-[color:var(--color-text)] transition-colors duration-[var(--duration-standard)] ease-[var(--ease-standard)] hover:text-[color:var(--color-olive)] motion-reduce:transition-none" href="/kontak">
                           {opportunity.cta} <span aria-hidden="true">→</span>
